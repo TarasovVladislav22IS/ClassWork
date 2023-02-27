@@ -1,0 +1,17 @@
+Module Module1
+
+    Sub Main()
+        Dim kop As Decimal
+        Dim kop1 As Decimal
+        Dim rub As Integer
+        Console.WriteLine("Введите кол-во копеек")
+        kop = Console.ReadLine()
+        rub = kop / 100
+        Console.WriteLine("Количество рублей составляет " & rub)
+        kop1 = kop Mod 100
+        Console.WriteLine("Количество копеек составляет " & kop1)
+        Console.ReadKey()
+
+    End Sub
+
+End Module
