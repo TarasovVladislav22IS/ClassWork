@@ -1,0 +1,26 @@
+Module Module1
+
+    Sub Main()
+        Dim a(5) As Integer
+        For i = 0 To a.Length - 1
+            a(i) = Console.ReadLine
+        Next
+        Invertion(a)
+        Dim b(5) As String
+        For k = 0 To a.Length - 1
+            b(k) = Console.ReadLine
+        Next
+        InvertionS(b)
+        Console.ReadKey()
+    End Sub
+    Sub Invertion(a As Integer())
+        For j = a.Length - 1 To 0 Step -1
+            Console.WriteLine(a(j))
+        Next
+    End Sub
+    Sub InvertionS(b As String())
+        For l = b.Length - 1 To 0 Step -1
+            Console.WriteLine(b(l))
+        Next
+    End Sub
+End Module
