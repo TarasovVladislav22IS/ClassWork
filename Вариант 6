@@ -1,0 +1,14 @@
+Module Module1
+
+    Sub Main()
+        Dim a, b, z, x, y As Integer
+        a = -1.7
+        b = 2.4
+        x = Math.Cos(a) + Math.Pow(Math.E, b) / a - b
+        y = Math.Log(b + 2)
+        z = Math.Pow(Math.E, x) - Math.Pow(Math.Sin(x + y), 2)
+        Console.WriteLine(z)
+        Console.ReadKey()
+    End Sub
+
+End Module
