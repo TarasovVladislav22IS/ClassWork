@@ -1,0 +1,47 @@
+Module Module1
+
+    Sub Main()
+        Dim Symbol As String
+        Dim value, x, y As Integer
+        x = 0
+        y = 0
+        Symbol = Console.ReadLine
+        value = Console.ReadLine
+
+        Tablica(Symbol, value, x, y)
+
+        Console.ReadKey()
+    End Sub
+    Sub HLine(symbol As String, value As Integer)
+        For i = 1 To value
+            Console.Write(symbol & " ")
+        Next
+    End Sub
+    Sub VLine(symbol As String, value As Integer, x As Integer, y As Integer)
+        For i = 1 To value
+            Console.SetCursorPosition(x, y)
+            Console.Write(symbol)
+            y += 1
+        Next
+    End Sub
+    Sub Cube(symbol As String, value As Integer, x As Integer, y As Integer)
+        Console.SetCursorPosition(x, y)
+        HLine(symbol, value)
+        Console.SetCursorPosition(x, y + value - 1)
+        HLine(symbol, value)
+        Console.SetCursorPosition(x, y)
+        VLine(symbol, value, x, y)
+        Console.SetCursorPosition(x + (value * 2) - 2, y)
+        VLine(symbol, value, x + (value * 2) - 2, y)
+    End Sub
+    Sub Tablica(symbol As String, value As Integer, x As Integer, y As Integer)
+        For j = 0 To 6
+            For i = 0 To 6
+                Cube(symbol, value, x, y)
+                x += value * 2 - 2
+            Next
+            y += value - 1
+            x = 0
+        Next
+    End Sub
+End Module
