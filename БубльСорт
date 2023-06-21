@@ -1,0 +1,42 @@
+Module Module1
+
+    Sub Main()
+        Dim a(5) As Integer
+        Dim index, value, b As Integer
+        For i = 0 To a.Length - 1
+            a(i) = Console.ReadLine
+        Next
+        search(value, a)
+        BubbleSort(a)
+        Console.ReadKey()
+    End Sub
+    Function search(usval As Integer, a() As Integer)
+        Dim b As Integer
+        For i = 0 To a.Length - 1
+            If usval = a(i) Then b = a(i)
+        Next
+        Return b
+    End Function
+    Function Max(a() As Integer, index As Integer)
+        Dim b As Integer
+        For i = index To a.Length - 1
+            If b < a(i) Then b = i
+        Next
+        Return b
+    End Function
+    Sub BubbleSort(a() As Integer)
+        Dim boofer As Integer
+        For i = 0 To a.Length - 2
+            For j = 0 To a.Length - 2
+                If a(j) < a(j + 1) Then
+                    boofer = a(j)
+                    a(j) = a(j + 1)
+                    a(j + 1) = boofer
+                End If
+            Next
+        Next
+        For k = 0 To a.Length - 1
+            Console.WriteLine(a(k))
+        Next
+    End Sub
+End Module
