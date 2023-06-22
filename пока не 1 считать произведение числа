@@ -1,0 +1,14 @@
+Module Module1
+
+    Sub Main()
+        Dim usval, value As Integer
+        value = 1
+        While usval <> 1
+            usval = Console.ReadLine
+            value = value * usval
+        End While
+        Console.WriteLine(value)
+        Console.ReadKey()
+    End Sub
+
+End Module
