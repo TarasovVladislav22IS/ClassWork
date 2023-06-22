@@ -1,0 +1,18 @@
+Module Module1
+
+    Sub Main()
+        Dim naimenovanie As String
+        Dim cena, stoimost As Integer
+        Dim ves As Double
+        Console.WriteLine("Введите наименование")
+        naimenovanie = Console.ReadLine
+        Console.WriteLine("Введите цену за килограмм")
+        cena = Console.ReadLine
+        Console.WriteLine("Введите вес")
+        ves = Console.ReadLine
+        stoimost = ves * cena
+        Console.WriteLine("Наименование: " & naimenovanie & ", Вес: " & ves & ", Цена: " & cena & ", Стоимость: " & stoimost)
+        Console.ReadKey()
+    End Sub
+
+End Module
