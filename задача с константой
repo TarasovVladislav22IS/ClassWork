@@ -1,0 +1,17 @@
+Module Module1
+
+    Sub Main()
+        Dim usval, constant As Integer
+        usval = Console.ReadLine
+        constant = 15
+        For i = usval To constant Step -1
+            If usval < constant Then
+                Exit For
+            Else
+                Console.WriteLine(i)
+            End If
+        Next
+        Console.ReadKey()
+    End Sub
+
+End Module
