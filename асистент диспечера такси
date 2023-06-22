@@ -1,0 +1,21 @@
+Module Module1
+
+    Sub Main()
+        Dim ylica, NDoma As String
+        Dim Rastoianie As Integer
+        Dim cena, stoimost As Double
+        cena = 12.25
+        Console.WriteLine("Введите улицу")
+        ylica = Console.ReadLine
+        Console.WriteLine("Введите номер дома")
+        NDoma = Console.ReadLine
+        Console.WriteLine("Введите расстояние")
+        Rastoianie = Console.ReadLine
+        stoimost = Rastoianie * cena
+        Console.WriteLine("Улица: " & ylica & ", номер дома: " & NDoma)
+        Console.WriteLine("Стоимость: " & Math.Round(stoimost, 2) & " Рублей")
+
+        Console.ReadKey()
+    End Sub
+
+End Module
