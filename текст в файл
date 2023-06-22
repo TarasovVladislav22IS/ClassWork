@@ -1,0 +1,37 @@
+Imports System.IO
+Imports System.Security.Cryptography
+Imports System.Text
+
+Module Module1
+
+    Sub Main()
+        Dim path As String = "C:\1\NewTest.txt"
+        Dim a As Integer
+        Do
+            Console.WriteLine("Записать в файл - 1, прочитать файл - 2, 3 - Выйти из программы")
+            a = Console.ReadLine
+            Select Case a
+                Case 1
+                    zapisVFile(path)
+                Case 2
+                    ChtenieIzFaila(path)
+                Case 3
+                    Exit Do
+            End Select
+        Loop
+        Console.ReadKey()
+    End Sub
+    Sub zapisVFile(path As String)
+        Dim usval(4) As String
+        For i = 0 To usval.Length - 1
+            usval(i) = Console.ReadLine
+        Next
+        IO.File.WriteAllLines(path, usval)
+    End Sub
+    Sub ChtenieIzFaila(path As String)
+        Dim massiv() As String = IO.File.ReadAllLines(path, System.Text.Encoding.UTF8)
+        For i = 0 To massiv.Length - 1
+            Console.WriteLine(massiv(i))
+        Next
+    End Sub
+End Module
